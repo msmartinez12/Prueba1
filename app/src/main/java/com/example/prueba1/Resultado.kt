@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_resultado.*
+import kotlinx.android.synthetic.main.activity_resultado2.*
 
 class Resultado : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,12 +47,18 @@ class Resultado : AppCompatActivity() {
         if(imcTotal <= mayor && imcTotal >= menor){
             var mensaje =  "Peso ideal"
             tv_peso_final_mensaje.setText(mensaje)
+            img_1.setImageResource(R.drawable.perro)
+
         }else if(imcTotal > mayor){
             var mensaje =  "Sobre Peso"
             tv_peso_final_mensaje.setText(mensaje)
+            img_1.setImageResource(R.drawable.perro_mas)
+
         }else{
             var mensaje =  "Peso inferior"
             tv_peso_final_mensaje.setText(mensaje)
+            img_1.setImageResource(R.drawable.perro_menos)
+
         }
 
         btn_regresar.setOnClickListener{

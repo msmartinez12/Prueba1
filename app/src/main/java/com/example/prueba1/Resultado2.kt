@@ -35,18 +35,25 @@ class Resultado2 : AppCompatActivity() {
         }
 
 
+
+
         tv_nombre2.setText("El IMC de " + nombre + " es:")
         tv_peso_final.setText("" + imcTotal)
 
         if(imcTotal <= mayor && imcTotal >= menor){
             var mensaje =  "Peso ideal"
             tv_peso_final_mensaje2.setText(mensaje)
+            img_2.setImageResource(R.drawable.perro)
+
         }else if(imcTotal > mayor){
             var mensaje =  "Sobre Peso"
             tv_peso_final_mensaje2.setText(mensaje)
+            img_2.setImageResource(R.drawable.perro_mas)
         }else{
             var mensaje =  "Peso inferior"
             tv_peso_final_mensaje2.setText(mensaje)
+            img_2.setImageResource(R.drawable.perro_menos)
+
         }
 
         btn_regresar2.setOnClickListener{
